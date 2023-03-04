@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:lab_activity_saturday/model/recipe.dart';
 import 'package:lab_activity_saturday/repository/recipeRepository.dart';
 import 'package:lab_activity_saturday/screen/recipeScreens/addRecipe.dart';
+import 'package:lab_activity_saturday/screen/recipeScreens/updateRecipe.dart';
 
 class RecipePage extends StatefulWidget {
   const RecipePage({super.key});
@@ -52,7 +53,15 @@ class _RecipePageState extends State<RecipePage> {
                               mainAxisSize: MainAxisSize.min,
                               children: [
                                 IconButton(
-                                  onPressed: () {},
+                                  onPressed: () {
+                                    Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                        builder: (context) =>
+                                            UpdateRecipe(recipe),
+                                      ),
+                                    );
+                                  },
                                   icon: const Icon(Icons.edit,
                                       color: Colors.blue),
                                 ),

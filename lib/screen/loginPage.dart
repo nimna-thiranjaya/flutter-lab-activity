@@ -87,9 +87,10 @@ class _LoginPageState extends State<LoginPage> {
             TextField(
               controller: _emailController,
               decoration: const InputDecoration(
-                  border: OutlineInputBorder(),
-                  labelText: 'Email',
-                  hintText: "Enter email"),
+                suffixIcon: Icon(Icons.email),
+                border: OutlineInputBorder(),
+                labelText: 'Email',
+              ),
             ),
             const SizedBox(
               height: 10,
@@ -97,9 +98,10 @@ class _LoginPageState extends State<LoginPage> {
             TextField(
               controller: _passwordController,
               decoration: const InputDecoration(
-                  border: OutlineInputBorder(),
-                  labelText: 'Password',
-                  hintText: "Enter password"),
+                suffixIcon: Icon(Icons.lock),
+                border: OutlineInputBorder(),
+                labelText: 'Password',
+              ),
             ),
             const SizedBox(
               height: 10,
