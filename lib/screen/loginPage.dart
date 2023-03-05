@@ -102,6 +102,14 @@ class _LoginPageState extends State<LoginPage> {
                 border: OutlineInputBorder(),
                 labelText: 'Password',
               ),
+              obscureText: true,
+            ),
+            const SizedBox(
+              height: 10,
+            ),
+            Text(
+              _errorMessage,
+              style: const TextStyle(color: Colors.red),
             ),
             const SizedBox(
               height: 10,
